@@ -33,6 +33,7 @@ const sctiptsFiles = [
 	'app/js/src/main.js',
 ];
 const stylesFiles = [
+	'app/css/src/reset.css',
 	'node_modules/bootstrap/dist/css/bootstrap.css',
 	'app/css/src/main.scss',
 ];
