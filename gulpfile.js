@@ -28,7 +28,7 @@ function browsersync() {
 }
 
 const sctiptsFiles = [
-	'node_modules/jquery/dist/jquery.min.js',
+	'node_modules/jquery/dist/jquery.js',
 	'node_modules/bootstrap/dist/js/bootstrap.js',
 	'app/js/src/main.js',
 ];
