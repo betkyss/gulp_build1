@@ -29,12 +29,13 @@ function browsersync() {
 
 const sctiptsFiles = [
 	'node_modules/jquery/dist/jquery.js',
-	'node_modules/bootstrap/dist/js/bootstrap.js',
+	// 'node_modules/bootstrap/dist/js/bootstrap.js',
 	'app/js/src/main.js',
 ];
 const stylesFiles = [
 	'app/css/src/reset.css',
-	'node_modules/bootstrap/dist/css/bootstrap.css',
+	'app/css/src/fonts.css',
+	// 'node_modules/bootstrap/dist/css/bootstrap.css',
 	'app/css/src/main.scss',
 ];
 
@@ -73,10 +74,16 @@ function images() {
 		.pipe(dest('app/img/dest/'))
 }
 
+function fonts() {
+	return src('app/fonts/src/**/*')
+		.pipe(dest('app/fonts/dest/'))
+}
+
 function cleandest() {
 	return del([
 		'app/img/dest/**/*',
 		'app/js/dest/**/*',
+		'app/fonts/dest/**/*',
 		'app/css/dest/**/*'
 	])
 }
@@ -89,6 +96,7 @@ function buildcopy() {
 	return src([
 			'app/css/dest/**/*',
 			'app/js/dest/**/*',
+			'app/fonts/dest/**/*',
 			'app/img/dest/**/*',
 			'app/**/*.html',
 		], {
