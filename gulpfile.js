@@ -37,6 +37,7 @@ const stylesFiles = [
 	'app/css/src/fonts.css',
 	// 'node_modules/bootstrap/dist/css/bootstrap.css',
 	'app/css/src/main.scss',
+	'app/css/src/media.scss',
 ];
 
 function scripts() {
