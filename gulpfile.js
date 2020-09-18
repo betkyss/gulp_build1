@@ -35,6 +35,7 @@ const sctiptsFiles = [
 const stylesFiles = [
 	'app/css/src/reset.css',
 	'app/css/src/fonts.css',
+	'node_modules/font-awesome/css/font-awesome.css',
 	// 'node_modules/bootstrap/dist/css/bootstrap.css',
 	'app/css/src/main.scss',
 	'app/css/src/media.scss',
@@ -76,7 +77,10 @@ function images() {
 }
 
 function fonts() {
-	return src('app/fonts/src/**/*')
+	return src([
+			'app/fonts/src/**/*',
+			'node_modules/font-awesome/fonts/**/*'
+		])
 		.pipe(dest('app/fonts/dest/'))
 }
 
@@ -117,10 +121,11 @@ exports.browsersync = browsersync;
 exports.scripts = scripts;
 exports.styles = styles;
 exports.images = images;
+exports.fonts = fonts;
 exports.cleandest = cleandest;
 exports.cleandist = cleandist;
 exports.buildcopy = buildcopy;
 // exports.build = series(cleandist, scripts, styles, images, buildcopy);
 
 // exports.default = parallel(scripts, styles, images, browsersync, startwatch);
-exports.default = series(cleandist, scripts, styles, images, buildcopy, parallel(browsersync, startwatch));
+exports.default = series(cleandist, scripts, fonts, styles, images, buildcopy, parallel(browsersync, startwatch));

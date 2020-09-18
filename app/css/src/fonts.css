@@ -1,0 +1,22 @@
+@font-face {
+	font-family: 'font-awesome';
+	src: url('../../fonts/dest/fontawesome-webfont.eot');
+	/* IE9 Compat Modes */
+	src: url('../../fonts/dest/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+		/* IE6-IE8 */
+		url('../../fonts/dest/fontawesome-webfont.woff2') format('woff2'),
+		/* Super Modern Browsers */
+		url('../../fonts/dest/fontawesome-webfont.woff') format('woff'),
+		/* Pretty Modern Browsers */
+		url('../../fonts/dest/fontawesome-webfont.ttf') format('truetype'),
+		/* Safari, Android, iOS */
+		url('../../fonts/dest/fontawesome-webfont.svg#svgFontName') format('svg'),
+		url('../../../node_modules/font-awesome/fonts/FontAwesome.otf') format('opentype');
+	/* Legacy iOS */
+}
+
+i {
+	font-family: 'font-awesome';
+	font-weight: normal;
+	font-style: normal;
+}
